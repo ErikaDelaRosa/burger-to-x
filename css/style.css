@@ -1,0 +1,59 @@
+/*appearance of the box*/
+.x-menu {
+    background-color: lightgray;
+    width: 6rem;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: -1;
+  }
+  /*esthetic of the lines*/
+  .line {
+    width: 4.5rem;
+    height: 0.7rem;
+    background-color: grey;
+    border-radius: 15%;
+    transition:1s; /*the time that will take to do the action*/
+  }
+  /*now i have to adjust every line to make a move after the mouse is over,ever line, one direction to create the X*/
+
+  .line.one {
+    position: relative;
+    animation-name: move-x;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+  .line.two {
+    position: relative;
+    animation-name: move-x;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+  .x-menu:hover .line.one{
+    transform: rotate(45deg) translate(0, 10px) scale(2);
+    background-color: blueviolet;
+    cursor:zoom-in;
+    
+  }
+  .x-menu:hover .line.sec{
+    transform: rotate(-45deg) translate(0, -10px) scale(2);
+    background-color: blueviolet;
+    cursor:zoom-in;
+  }
+
+  /*here I am trying to make every line move, and it does, but not interlace between them:
+
+  .line.sec:hover {
+    background-color: blueviolet;
+    transform: scale(1.1);
+    transform: rotate(-40deg);
+    cursor:zoom-in;
+  }
+  .line.one:hover{
+    background-color: blueviolet;
+    transform: scale(1.1);
+    transform: rotate(40deg);
+    cursor:zoom-in;
+}*/
