@@ -22,7 +22,7 @@
   }
   /*now i have to adjust every line to make a move after the mouse is over,ever line, one direction to create the X*/
 
-  /*I realized i do not need these lines -makes no effect! 
+  /*I realized i do not need these lines - make no effect! 
   .line.one {
     position: relative;
     animation-name: move-x;
@@ -37,7 +37,7 @@
   }
   */
   .x-menu:hover .line.one{
-    transform: rotate(45deg) translate(13px, 10px) scale(1.5);
+    transform: rotate(45deg) translate(13px, 10px) scale(1.5); /*to make it the departure equal in both cases, the first number after translate must be the same in both lines*/
     background-color: white;
     cursor:zoom-in;
     
