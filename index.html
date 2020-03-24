@@ -4,13 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Animation</title>
+    <title>Animation - Burger menu</title>
   </head>
+
   <body>
       <!--hamburger menu-->
+    <button id="click" onclick="this.style.color='red'; this.style.fontSize='60px';"
+    >
     <div class="x-menu">
+      <span>Click here</span>
       <div class="line one"></div>
       <div class="line sec"></div>
     </div>
+
+<!--from here i start the drop menu-->
+    <div class="content">
+    <button id="ndButton" onclick="hideShow()">show more</button>
+    <div id="drop-menu" class="drop-content">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Shopping</a>
+      <a href="#">Support</a>
+    </div>
+    </div>
+ 
+<!--says welcome to the user-->
+    <script>
+      function hideShow() {
+        if (box.style.display == "none") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
   </body>
 </html>

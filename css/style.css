@@ -1,8 +1,8 @@
 /*appearance of the box*/
 .x-menu {
     background-color: grey;
-    width: 6.5rem;
-    height: 6rem;
+    width: 8rem;
+    height: 7.5rem;
     border:white dotted;
     display: flex;
     align-items: center;
@@ -10,55 +10,85 @@
     flex-direction: column;
     z-index: -1;
   }
+  /*span edit here*/
+  span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+  }
+ 
+  /*how it will behave after i pass the mouse over*/
+  #click {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5%;
+    color:lightgray;
+  }
+   #click:hover {
+    box-shadow: 0 12px 12px 0 rgb(70, 9, 38);
+    cursor: grab;
+    color: rgb(192, 15, 168);
+    background-color:darkgrey;
+  }
+ 
+  
   /*esthetic of the lines*/
   .line {
-    width: 4.5rem;
-    height: 0.7rem;
+    width: 5.5rem;
+    height: .9rem;
     background-color: rgba(205, 152, 230, 0.589);
     border-radius: 15%;
     animation-duration: 3s;
     animation-timing-function: linear;
     transition:1s; /*the time that will take to do the action*/
   }
+  
   /*now i have to adjust every line to make a move after the mouse is over,ever line, one direction to create the X*/
-
-  /*I realized i do not need these lines - make no effect! 
-  .line.one {
-    position: relative;
-    animation-name: move-x;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-  }
-  .line.two {
-    position: relative;
-    animation-name: move-x;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-  }
-  */
   .x-menu:hover .line.one{
-    transform: rotate(45deg) translate(13px, 10px) scale(1.5); /*to make it the departure equal in both cases, the first number after translate must be the same in both lines*/
+    transform: rotate(45deg) translate(14px, 11px) scale(1.5); /*to make it the departure equal in both cases, the first number after translate must be the same in both lines*/
     background-color: white;
     cursor:zoom-in;
     
   }
   .x-menu:hover .line.sec{
-    transform: rotate(-45deg) translate(13px, -10px) scale(1.5);
+    transform: rotate(-45deg) translate(14px, -10px) scale(1.5);
     background-color:white;
     cursor:zoom-in;
   }
+/*this is the menu after the use clicks on the button*/
 
-  /*here I am trying to make every line move, and it does, but not interlace between them:
-
-  .line.sec:hover {
-    background-color: blueviolet;
-    transform: scale(1.1);
-    transform: rotate(-40deg);
-    cursor:zoom-in;
+/*the button*/
+  #ndButton {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor:help;
   }
-  .line.one:hover{
-    background-color: blueviolet;
-    transform: scale(1.1);
-    transform: rotate(40deg);
-    cursor:zoom-in;
-}*/
+  /*how the mouse reacts on top of the #ndbutton*/
+  #ndButton:hover, #ndButton:focus {
+    background-color: rgb(31, 138, 124);
+  }
+  .content{
+    position: relative;
+    display:inline-block;
+  }
+  .drop-content {
+    display: none;
+    position: absolute;
+    background-color: #36d8ee;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  .drop-content a {
+    color: rgb(77, 11, 211) bold;
+    font-size: 16px;
+    padding: 12px 16px;
+    text-decoration:none;
+    display: block;
+  }
+
+  #drop-menu a:hover {
+    background-color: rgb(230, 140, 140);
+  }
+
