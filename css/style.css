@@ -1,8 +1,13 @@
 /*appearance of the box*/
 .x-menu {
     background-color: grey;
+<<<<<<< HEAD
     width: 8rem;
     height: 7.5rem;
+=======
+    width: 6.5rem;
+    height: 6rem;
+>>>>>>> 39a65e5456e8dfc4b8ce0ad1a98f978d5ac626f7
     border:white dotted;
     display: flex;
     align-items: center;
@@ -33,24 +38,57 @@
   
   /*esthetic of the lines*/
   .line {
+<<<<<<< HEAD
     width: 5.5rem;
     height: .9rem;
+    background-color: rgba(205, 152, 230, 0.589);
+    border-radius: 15%;
+=======
+    width: 4.5rem;
+    height: 0.7rem;
     background-color: rgba(205, 152, 230, 0.589);
     border-radius: 15%;
     animation-duration: 3s;
     animation-timing-function: linear;
     transition:1s; /*the time that will take to do the action*/
   }
+  /*now i have to adjust every line to make a move after the mouse is over,ever line, one direction to create the X*/
+
+  /*I realized i do not need these lines - make no effect! 
+  .line.one {
+    position: relative;
+    animation-name: move-x;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+  }
+  .line.two {
+    position: relative;
+    animation-name: move-x;
+>>>>>>> 39a65e5456e8dfc4b8ce0ad1a98f978d5ac626f7
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    transition:1s; /*the time that will take to do the action*/
+  }
+<<<<<<< HEAD
   
   /*now i have to adjust every line to make a move after the mouse is over,ever line, one direction to create the X*/
   .x-menu:hover .line.one{
     transform: rotate(45deg) translate(14px, 11px) scale(1.5); /*to make it the departure equal in both cases, the first number after translate must be the same in both lines*/
+=======
+  */
+  .x-menu:hover .line.one{
+    transform: rotate(45deg) translate(13px, 10px) scale(1.5); /*to make it the departure equal in both cases, the first number after translate must be the same in both lines*/
+>>>>>>> 39a65e5456e8dfc4b8ce0ad1a98f978d5ac626f7
     background-color: white;
     cursor:zoom-in;
     
   }
   .x-menu:hover .line.sec{
+<<<<<<< HEAD
     transform: rotate(-45deg) translate(14px, -10px) scale(1.5);
+=======
+    transform: rotate(-45deg) translate(13px, -10px) scale(1.5);
+>>>>>>> 39a65e5456e8dfc4b8ce0ad1a98f978d5ac626f7
     background-color:white;
     cursor:zoom-in;
   }
@@ -91,4 +129,13 @@
   #drop-menu a:hover {
     background-color: rgb(230, 140, 140);
   }
+<<<<<<< HEAD
+=======
+  .line.one:hover{
+    background-color: blueviolet;
+    transform: scale(1.1);
+    transform: rotate(40deg);
+    cursor:zoom-in;
+}*/
+>>>>>>> 39a65e5456e8dfc4b8ce0ad1a98f978d5ac626f7
 
